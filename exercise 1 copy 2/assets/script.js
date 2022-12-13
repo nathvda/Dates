@@ -12,3 +12,4 @@ document.getElementById("whatTime").innerHTML = dateNew;
 let inputChamp = document.getElementById("HoursInput")
 
 inputChamp.addEventListener("keyup", inFuture);
+inputChamp.addEventListener("change", inFuture);
