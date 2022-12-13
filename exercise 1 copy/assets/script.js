@@ -11,6 +11,6 @@ return daysSince;
 
 setInterval(() => {
 
-    document.getElementById("howOld").innerHTML = oldYet("1994-06-16");
-    document.getElementById("howManyDays").innerHTML = oldYet("2022-10-31");}
+    document.getElementById("howOld").innerHTML = `Jours depuis la naissance : ${oldYet("1994-06-16")}`;
+    document.getElementById("howManyDays").innerHTML = `Jours depuis le dernier Halloween : ${oldYet("2022-10-31")}`;}
     , 1000);

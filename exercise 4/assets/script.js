@@ -83,6 +83,14 @@ function displayDate() {
     seconds = `0${jourMois}`;
   }
 
+  if (hours < 10){
+    hours = `0${hours}`;
+  }
+
+  if (minutes < 10){
+    minutes = `0${minutes}`;
+  }
+
   document.getElementById("day").innerHTML = jour;
   document.getElementById("date").innerHTML = `<span>${jourMois} </span><span>${mois}`;
   document.getElementById("year").innerHTML = annee;
