@@ -1,21 +1,16 @@
-function displayDate(tmz){
-let date = new Date();
-let timezone = tmz;
-let h = date.getUTCHours() + timezone;
+function oldYet(day){
+let date = new Date().getTime();
+let dateBirth = new Date(`${day}`).getTime();
+let milli = date - dateBirth;
+ 
+let daysSince = Math.floor((milli / (1000 * 60 * 60 * 24)));
 
-if (h === -1){
-    h = 23;
+console.log(daysSince);
+return daysSince;
 }
 
-let m = date.getUTCMinutes();
-let s = date.getUTCSeconds();
-console.log(date);
-console.log(h + ":" + m + ":" + s);
+setInterval(() => {
 
-return `${h}:${m}:${s}`;
-}
-
-setInterval(() => {document.getElementById("anchorage").innerHTML = `${displayDate(-9)}`;
-document.getElementById("reykjavik").innerHTML = displayDate(0);
-document.getElementById("saintpet").innerHTML = displayDate(+3);
-document.getElementById("bruxelles").innerHTML = displayDate(+1);},1000);
+    document.getElementById("howOld").innerHTML = oldYet("1994-06-16");
+    document.getElementById("howManyDays").innerHTML = oldYet("2022-10-31");}
+    , 1000);
